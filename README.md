@@ -16,7 +16,7 @@ A fast, dependency-free static site (HTML + CSS + vanilla JS) that deploys to Gi
 ├── assets/
 │   ├── logo.png                # Company logo
 │   └── favicon.png
-└── .github/workflows/pages.yml # Auto-deploy to GitHub Pages on push to main
+└── .github/workflows/pages.yml # Copies main → gh-pages on every push (publishes the site)
 ```
 
 ## Run locally
@@ -34,8 +34,11 @@ python3 -m http.server 8000
 git clone https://github.com/Beachom/kelly-educational-consulting-website.git
 ```
 
-To publish, go to **Settings → Pages → Build and deployment → Source: GitHub Actions**. The site will be live at
-`https://beachom.github.io/kelly-educational-consulting-website/` after the workflow finishes.
+## Live site
+
+**https://beachom.github.io/kelly-educational-consulting-website/**
+
+GitHub Pages serves the site from the `gh-pages` branch. Just push to `main`: the **Publish site** workflow copies `main` onto `gh-pages` and the live site updates within a minute or two. Don't edit `gh-pages` directly.
 
 ### Custom domain (optional)
 
