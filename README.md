@@ -28,22 +28,14 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
-## Publish to GitHub
+## Clone
 
 ```bash
-# from this folder
-git remote add origin https://github.com/<your-username>/kelly-educational-consulting.git
-git push -u origin main
+git clone https://github.com/Beachom/kelly-educational-consulting-website.git
 ```
 
-Or with the GitHub CLI:
-
-```bash
-gh repo create kelly-educational-consulting --public --source=. --push
-```
-
-Then in the repo go to **Settings → Pages → Build and deployment → Source: GitHub Actions**. The site will be live at
-`https://<your-username>.github.io/kelly-educational-consulting/` after the workflow finishes.
+To publish, go to **Settings → Pages → Build and deployment → Source: GitHub Actions**. The site will be live at
+`https://beachom.github.io/kelly-educational-consulting-website/` after the workflow finishes. (GitHub Pages on a private repo needs a paid GitHub plan; on a free plan, make the repo public first.)
 
 ### Custom domain (optional)
 
@@ -55,9 +47,9 @@ Then in the repo go to **Settings → Pages → Build and deployment → Source:
 
 Search the code for `TODO` to find them all:
 
-- [ ] **Contact info** in `index.html` (email, phone are placeholders) and `CONTACT_EMAIL` in `script.js`
-- [ ] **Services list** — confirm the four services match what the company offers
-- [ ] **LinkedIn URLs** — verify the company page and jobs links
+- [ ] **Contact info** — email is a placeholder (`index.html` and `CONTACT_EMAIL` in `script.js`); phone is TBD and commented out
+- [ ] **Team** — headshots (see `assets/team/README.md`), Emily's last name, confirm Shanleigh's last name
+- [ ] **Services list** — confirm the six services match what the company offers
 - [ ] **Logo** — `assets/logo.png` was cropped from a screenshot; replace with the original high-res file (SVG or 512px+ PNG)
 - [ ] **Contact form** — currently opens the visitor's email app. To receive submissions directly, use a service like [Formspree](https://formspree.io): set `action="https://formspree.io/f/XXXX"` and `method="POST"` on the form and remove the submit handler in `script.js`
 
