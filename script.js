@@ -16,8 +16,17 @@ links.querySelectorAll('a').forEach(a =>
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Team headshots: show the photo if it exists, otherwise keep the initials
+document.querySelectorAll('.avatar').forEach(el => {
+  el.textContent = el.dataset.initials || '';
+  const img = new Image();
+  img.alt = '';
+  img.onload = () => { el.textContent = ''; el.appendChild(img); };
+  img.src = el.dataset.photo;
+});
+
 // Reveal sections on scroll
-const revealables = document.querySelectorAll('.section .container, .card, .steps li');
+const revealables = document.querySelectorAll('.section .container, .card, .steps li, .member, .audience article');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
