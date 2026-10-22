@@ -35,7 +35,7 @@ git clone https://github.com/Beachom/kelly-educational-consulting-website.git
 ```
 
 To publish, go to **Settings → Pages → Build and deployment → Source: GitHub Actions**. The site will be live at
-`https://beachom.github.io/kelly-educational-consulting-website/` after the workflow finishes. (GitHub Pages on a private repo needs a paid GitHub plan; on a free plan, make the repo public first.)
+`https://beachom.github.io/kelly-educational-consulting-website/` after the workflow finishes.
 
 ### Custom domain (optional)
 
@@ -48,7 +48,7 @@ To publish, go to **Settings → Pages → Build and deployment → Source: GitH
 Search the code for `TODO` to find them all:
 
 - [ ] **Contact info** — email is a placeholder (`index.html` and `CONTACT_EMAIL` in `script.js`); phone is TBD and commented out
-- [ ] **Team** — headshots (see `assets/team/README.md`), Emily's last name, confirm Shanleigh's last name
+- [ ] **Team** — headshots (see `assets/team/README.md`)
 - [ ] **Services list** — confirm the six services match what the company offers
 - [ ] **Logo** — `assets/logo.png` was cropped from a screenshot; replace with the original high-res file (SVG or 512px+ PNG)
 - [ ] **Contact form** — currently opens the visitor's email app. To receive submissions directly, use a service like [Formspree](https://formspree.io): set `action="https://formspree.io/f/XXXX"` and `method="POST"` on the form and remove the submit handler in `script.js`
